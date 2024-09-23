@@ -90,7 +90,7 @@ router.get('/getContentById/:id', (req, res) => {
   res.setHeader('Expires', '0');
   const { id } = req.params;
   const webRepository = new WebRepository();
-  console.log(id);
+  console.log('Se ha mandado la peticion para la obtencion de content');
   webRepository.getContentById(new ObjectId(id.trim())).then((web) => {
     if (web) {
       if (web.content && 'mensajes' in web.content) {
