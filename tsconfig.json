@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // Usa CommonJS para módulos
+    "target": "ES6", // Compila a ES6
+    "outDir": "./dist", // Carpeta para archivos compilados
+    "rootDir": "./src", // Carpeta de entrada para TypeScript
+    "strict": true, // Activa todas las comprobaciones estrictas
+    "esModuleInterop": true // Interoperabilidad con módulos ES
+  },
+  "include": ["src/**/*"], // Archivos a incluir
+  "exclude": ["node_modules"] // Archivos a excluir
+}
