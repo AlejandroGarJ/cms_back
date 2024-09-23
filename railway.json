@@ -1,5 +1,0 @@
-{
-  "build": {
-    "command": "npm install --omit=dev && npm run build"
-  }
-}
