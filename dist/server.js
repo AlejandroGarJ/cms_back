@@ -25,7 +25,7 @@ app.use((req, res) => {
     res.status(404).send('404 Not Found');
 });
 // Iniciar el servidor
-const PORT = 3000;
+const PORT = process.env.port;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
