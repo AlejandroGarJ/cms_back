@@ -25,7 +25,9 @@ app.use((req: Request, res: Response) => {
 });
 
 // Iniciar el servidor
-const PORT = 3005;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default app;
