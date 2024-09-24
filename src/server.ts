@@ -8,7 +8,11 @@ const app = express();
 
 // Middleware para parsear JSON
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:4201', // Replace with your frontend origin
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req: Request, res: Response) => {
