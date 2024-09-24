@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: 'http://localhost:4201', // Replace with your frontend origin
+    origin: 'https://cms-front-rust.vercel.app/', // Replace with your frontend origin
   })
 );
 app.use(express.urlencoded({ extended: true }));
