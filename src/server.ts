@@ -8,11 +8,7 @@ const app = express();
 
 // Middleware para parsear JSON
 app.use(express.json());
-app.use(
-  cors({
-    origin: 'https://cms-front-rust.vercel.app/', // Replace with your frontend origin
-  })
-);
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req: Request, res: Response) => {
