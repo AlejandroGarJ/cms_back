@@ -9,8 +9,11 @@ const webRoutes_1 = __importDefault(require("./web/infraestructure/webRoutes"));
 const cors_1 = __importDefault(require("cors"));
 const clientRoutes_1 = __importDefault(require("./client/infraestructure/clientRoutes"));
 // Crear una instancia de Express
+const body_parser_1 = __importDefault(require("body-parser"));
 const app = (0, express_1.default)();
 // Middleware para parsear JSON
+app.use(body_parser_1.default.json({ limit: '50mb' }));
+app.use(body_parser_1.default.urlencoded({ limit: '50mb', extended: true }));
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(express_1.default.urlencoded({ extended: true }));
