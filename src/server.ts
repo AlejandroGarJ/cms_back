@@ -9,8 +9,8 @@ const app = express();
 
 // Middleware para parsear JSON
 
-app.use(bodyParser.json({ limit: '1gb' }));
-app.use(bodyParser.urlencoded({ limit: '1gb', extended: true }));
+app.use(bodyParser.json({ limit: 'Infinity' }));
+app.use(bodyParser.urlencoded({ limit: 'Infinity', extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
